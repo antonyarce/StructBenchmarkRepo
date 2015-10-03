@@ -25,5 +25,7 @@ public class QuickSort {
 		   if(j+1 <der)
 		      quicksort(A,j+1,der); // ordenamos subarray derecho
 		}
+	
+
 
 }
