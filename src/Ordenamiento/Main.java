@@ -36,13 +36,29 @@ public class Main {
 		long finalMS = System.nanoTime();
 		long duracionMS = (finalMS - inicialMS);
 		System.out.println("MergeSort: "+ Arrays.toString(mergesort)+ "; Duracion: "+ duracionMS);
-
-		// Prueba del BinarySearch
+		
+		//Prueba de BubbleSort
+		int arreglo4[] = arrayAleatorio.llenarArrayAleatorio(inicio, fin, tamaño);
 		long inicialBS = System.nanoTime();
-		int busquedaBinaria = BinarySearch.binarysearch(arreglo, busqueda);
+		BubbleSort.bubblesort(arreglo4);
 		long finalBS = System.nanoTime();
 		long duracionBS = (finalBS - inicialBS);
-		System.out.println("BinarySearch: El numero "+ busqueda +" se encuentra en la posicion "+ busquedaBinaria + " ; Duracion: "+ duracionBS);
+		System.out.println("BubbleSort: "+ Arrays.toString(arreglo4)+ "; Duracion: "+ duracionBS);
+		
+		//Prueba de SelectionSort
+		int arreglo5[] = arrayAleatorio.llenarArrayAleatorio(inicio, fin, tamaño);
+		long inicialSS = System.nanoTime();
+		BubbleSort.bubblesort(arreglo5);
+		long finalSS = System.nanoTime();
+		long duracionSS = (finalSS - inicialSS);
+		System.out.println("SelectionSort: "+ Arrays.toString(arreglo5)+ "; Duracion: "+ duracionSS);
+
+		// Prueba del BinarySearch
+		long inicialBiS = System.nanoTime();
+		int busquedaBinaria = BinarySearch.binarysearch(arreglo, busqueda);
+		long finalBiS = System.nanoTime();
+		long duracionBiS = (finalBiS - inicialBiS);
+		System.out.println("BinarySearch: El numero "+ busqueda +" se encuentra en la posicion "+ busquedaBinaria + " ; Duracion: "+ duracionBiS);
 		
 		//Prueba del LinearSearch
 		long inicialLS = System.nanoTime();
