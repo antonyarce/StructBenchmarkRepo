@@ -9,8 +9,8 @@ public class Main {
 		
 		//Atributos del array aleatorio y las busquedas
 		int inicio = 1;
-		int fin = 10;
-		int tamaño = 10;
+		int fin = 1000;
+		int tamaño = 1000;
 		int busqueda = 5;
 
 		// Prueba de QuickSort
@@ -19,7 +19,7 @@ public class Main {
 		QuickSort.quicksort(arreglo, 0, tamaño - 1);
 		long finalQS = System.nanoTime();
 		long duracionQS = (finalQS - inicialQS);
-		System.out.println("QuickSort: "+ Arrays.toString(arreglo)+ "; Duracion: "+ duracionQS);
+		System.out.println("QuickSort | Duracion: "+ duracionQS +"; "+ Arrays.toString(arreglo));
 
 		//Prueba de InsertionSort
 		int arreglo2[] = arrayAleatorio.llenarArrayAleatorio(inicio, fin, tamaño);
@@ -27,7 +27,7 @@ public class Main {
 		InsertionSort.insertionsort(arreglo2);
 		long finalIS = System.nanoTime();
 		long duracionIS = (finalIS - inicialIS);
-		System.out.println("InsertionSort: "+ Arrays.toString(arreglo2)+ "; Duracion: "+ duracionIS);
+		System.out.println("InsertionSort | Duracion: "+ duracionIS +"; "+ Arrays.toString(arreglo2));
 
 		//Prueba de MergeSort
 		int arreglo3[] = arrayAleatorio.llenarArrayAleatorio(inicio, fin, tamaño);
@@ -35,7 +35,7 @@ public class Main {
 		int[] mergesort = MergeSort.mergesort(arreglo3);
 		long finalMS = System.nanoTime();
 		long duracionMS = (finalMS - inicialMS);
-		System.out.println("MergeSort: "+ Arrays.toString(mergesort)+ "; Duracion: "+ duracionMS);
+		System.out.println("MergeSort | Duracion: "+ duracionMS +"; "+ Arrays.toString(mergesort));
 		
 		//Prueba de BubbleSort
 		int arreglo4[] = arrayAleatorio.llenarArrayAleatorio(inicio, fin, tamaño);
@@ -43,7 +43,7 @@ public class Main {
 		BubbleSort.bubblesort(arreglo4);
 		long finalBS = System.nanoTime();
 		long duracionBS = (finalBS - inicialBS);
-		System.out.println("BubbleSort: "+ Arrays.toString(arreglo4)+ "; Duracion: "+ duracionBS);
+		System.out.println("BubbleSort | Duracion: "+ duracionBS +"; "+ Arrays.toString(arreglo4));
 		
 		//Prueba de SelectionSort
 		int arreglo5[] = arrayAleatorio.llenarArrayAleatorio(inicio, fin, tamaño);
@@ -51,7 +51,7 @@ public class Main {
 		BubbleSort.bubblesort(arreglo5);
 		long finalSS = System.nanoTime();
 		long duracionSS = (finalSS - inicialSS);
-		System.out.println("SelectionSort: "+ Arrays.toString(arreglo5)+ "; Duracion: "+ duracionSS);
+		System.out.println("SelectionSort | Duracion: "+ duracionSS +"; "+ Arrays.toString(arreglo5));
 
 		// Prueba del BinarySearch
 		long inicialBiS = System.nanoTime();

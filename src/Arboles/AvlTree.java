@@ -5,6 +5,10 @@
  */
 package Arboles;
 
+import java.util.Random;
+
+
+
 /**
  * Se crea la clase AvlTree
  * En esta clase va toda la lógica del árbol.
@@ -48,6 +52,22 @@ public class AvlTree {
         } else {
             //System.out.println("El elemento ya existe");
         }
+    }
+    
+    void InsertarAleatorio(int elementos, int data){
+    	
+    	Random rnd = new Random();
+    	while (elementos > 0){
+            if ((!Existe(data, root))) {
+                AvlNode info = new AvlNode(data);
+                this.root = InsertarBalanceado(getRoot(), info);
+            } else {
+                //System.out.println("El elemento ya existe");
+            }
+	        elementos = elementos - 1;
+	        data = rnd.nextInt(100 - 1 + 1) + 1;
+    	}
+
     }
     
     /**
