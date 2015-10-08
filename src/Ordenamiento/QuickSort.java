@@ -1,4 +1,4 @@
-package structbenchmark;
+package Ordenamiento;
 
 public class QuickSort {
 	
