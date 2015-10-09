@@ -9,8 +9,8 @@ public class Main {
 		
 		//Atributos del array aleatorio y las busquedas
 		int inicio = 1;
-		int fin = 1000;
-		int tamaño = 1000;
+		int fin = 100;
+		int tamaño = 10;
 		int busqueda = 5;
 
 		// Prueba de QuickSort
@@ -53,6 +53,15 @@ public class Main {
 		long duracionSS = (finalSS - inicialSS);
 		System.out.println("SelectionSort | Duracion: "+ duracionSS +"; "+ Arrays.toString(arreglo5));
 
+		// Prueba de HeapSort
+		int arreglo6[] = arrayAleatorio.llenarArrayAleatorio(inicio, fin, tamaño);
+		long inicialHS = System.nanoTime();
+        HeapSort.HeapSort(arreglo6);
+		long finalHS = System.nanoTime();
+		long duracionHS = (finalHS - inicialHS);
+		System.out.println("HeapSort | Duracion: "+ duracionHS +"; "+ Arrays.toString(arreglo6));
+
+		
 		// Prueba del BinarySearch
 		long inicialBiS = System.nanoTime();
 		int busquedaBinaria = BinarySearch.binarysearch(arreglo, busqueda);

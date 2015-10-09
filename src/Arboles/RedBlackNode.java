@@ -114,8 +114,9 @@ class RBTree
         handleReorient( item );
     }
     
-    void insertarAleatorio(int elementos, int item){
+    void insertarAleatorio(int elementos, int desde, int hasta){
     	Random rnd = new Random();
+    	int item = rnd.nextInt(hasta - desde + 1) + desde;
     	while (elementos > 0){
             current = parent = grand = header;
             nullNode.element = item;
@@ -140,7 +141,7 @@ class RBTree
                 parent.right = current;        
             handleReorient( item );
 	        elementos = elementos - 1;
-	        item = rnd.nextInt(100 - 1 + 1) + 1;
+	        item = rnd.nextInt(hasta - desde + 1) + desde;
     	}
     }
     /**

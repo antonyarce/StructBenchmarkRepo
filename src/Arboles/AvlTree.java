@@ -54,9 +54,9 @@ public class AvlTree {
         }
     }
     
-    void InsertarAleatorio(int elementos, int data){
-    	
+    void InsertarAleatorio(int elementos, int desde, int hasta){
     	Random rnd = new Random();
+    	int data = rnd.nextInt(hasta - desde + 1) + desde;
     	while (elementos > 0){
             if ((!Existe(data, root))) {
                 AvlNode info = new AvlNode(data);
@@ -65,7 +65,7 @@ public class AvlTree {
                 //System.out.println("El elemento ya existe");
             }
 	        elementos = elementos - 1;
-	        data = rnd.nextInt(100 - 1 + 1) + 1;
+	        data = rnd.nextInt(hasta - desde + 1) + desde;
     	}
 
     }

@@ -1,5 +1,7 @@
 package Arboles;
 
+import java.util.Random;
+
 public class abb {
  
     private class nodoArbol { //Clase nodo con constructor
@@ -42,7 +44,9 @@ public class abb {
         }
     }
     
-    public void insertarAleatorio(int a, int elementos){ //inserta elemntos al arbol
+    public void insertarAleatorio(int elementos, int desde, int hasta){ //inserta elemntos al arbol
+    	Random rnd = new Random();
+    	int a = rnd.nextInt(hasta - desde + 1) + desde;
     	while (elementos > 0){
 	        if (esVacio()) { //comprueba si es vacio
 	            nodoArbol nuevo = new nodoArbol(); //Si lo es, crea una raiz
@@ -60,7 +64,7 @@ public class abb {
 	            }
 	        }
 	        elementos = elementos - 1;
-	        a = a -1;
+	        a = rnd.nextInt(hasta - desde + 1) + desde;
     	}
     	
     }
